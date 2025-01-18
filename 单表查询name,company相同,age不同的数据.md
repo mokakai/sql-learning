@@ -46,8 +46,11 @@ HAVING
 输出：
 
 张三	腾讯	4,6,10
+
 ```
-### 不单行显示，只统计name.company相同age不同的有多少条数据存在
+
+
+### 不单行显示，只统计name.company相同,age不同的有多少条数据存在
 ```
 select name,company ,COUNT(*)  from test group by name,company HAVING COUNT(DISTINCT age)>1 ;
 
